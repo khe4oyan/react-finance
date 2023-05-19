@@ -1,0 +1,18 @@
+.target {
+  border: 1px solid rgba(0, 0, 0, .2);
+  padding: 10px;
+  margin: 10px 0px;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+}
+.target-info{}
+.target-name {}
+.target-price {}
+.target-lacks {color: red;}
+/* .target-panel {} */
+.target-panel__btn {
+  width: 100%;
+  margin: 1px;
+}
+/* .target-panel__btn-edit {} */
+/* .target-panel__btn-delete {} */

@@ -1,0 +1,9 @@
+.panel {
+  display: grid;
+  width: 60%;
+  grid-gap: 3px;
+  margin: auto;
+}
+/* .panel__target-name {} */
+/* .panel__target-price {} */
+/* .panel__add-btn {} */
