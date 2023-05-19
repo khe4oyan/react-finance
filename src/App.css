@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  border-radius: 3px;
+}
+.App {
+  min-height: 100dvh;
+}
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container {
+  padding: 10px;
+}
+button, input {
+  outline: none;
+  border: none;
+  padding: 5px 10px;
+  border: 1px solid rgba(0, 0, 0, .2);
+}
+
+
+.header {
+  border-radius: initial;
+  background-color: green;
+  display: grid;
+  grid-template-columns: 1fr 10fr 1fr;
+}
+.header__balance {
+  color: white;
+  text-align: center;
+}
+.header__button {
+  background-color: darkgreen;
+  color: white;
+}
+.header__button-rem{
+  background-color: rgb(121, 27, 27);
+}
+/* .header__button-add{} */
+
+.panel {
+  display: grid;
+  width: 60%;
+  grid-gap: 3px;
+  margin: auto;
+}
+.panel__target-name {}
+.panel__target-price {}
+.panel__add-btn {}
+
+.targets {}
+
+.target {
+  border: 1px solid rgba(0, 0, 0, .2);
+  padding: 10px;
+  margin: 10px 0px;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+}
+.target-info{}
+.target-name {}
+.target-price {}
+.target-lacks {color: red;}
+.target-panel {}
+.target-panel__btn {
+  width: 100%;
+  margin: 1px;
+}
+.target-panel__btn-edit {}
+.target-panel__btn-delete {}
