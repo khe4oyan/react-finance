@@ -1,7 +1,6 @@
 import './header.css';
 
 export default function Header({balance, setBalance}) {
-
   function add() {
     // open modal window
   }
