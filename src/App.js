@@ -22,6 +22,9 @@ export default function App() {
     <div className="App">
       <Header balance={balance} setBalance={setBalance}/>
       <Main balance={balance}/>
+      <footer className='center'>
+        V.1.0
+      </footer>
     </div>
   );
 }
