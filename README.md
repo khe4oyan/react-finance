@@ -4,6 +4,6 @@ Tasks
   - [x] rem button
 - [x] Panel
   - [x] add new target
-- [ ] Target elem
-  - [ ] edit button
-  - [ ] delete button
+- [x] Target elem
+  - [x] edit button
+  - [x] delete button

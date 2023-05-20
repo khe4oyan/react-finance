@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import './App.css';
-import Header from './comonents/header/Header';
-import Main from './comonents/main/Main';
+import Header from './components/header/Header';
+import Main from './components/main/Main';
 
 export default function App() {
   const [balance, setBalance] = useState(() => {
@@ -22,9 +22,6 @@ export default function App() {
     <div className="App">
       <Header balance={balance} setBalance={setBalance}/>
       <Main balance={balance}/>
-      <footer className='center'>
-        V.1.0
-      </footer>
     </div>
   );
 }

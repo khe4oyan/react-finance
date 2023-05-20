@@ -9,6 +9,9 @@
 .target-name {}
 .target-price {}
 .target-lacks {color: red;}
+.target-lacks-done{
+  color: green;
+}
 /* .target-panel {} */
 .target-panel__btn {
   width: 100%;
