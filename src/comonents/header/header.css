@@ -2,7 +2,7 @@
   border-radius: initial;
   background-color: green;
   display: grid;
-  grid-template-columns: 1fr 10fr 1fr;
+  grid-template-columns: 10fr 1fr;
 }
 .header__balance {
   color: white;
@@ -12,7 +12,3 @@
   background-color: darkgreen;
   color: white;
 }
-.header__button-rem{
-  background-color: rgb(121, 27, 27);
-}
-/* .header__button-add{} */

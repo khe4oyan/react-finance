@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './App.css';
 import Header from './comonents/header/Header';
 import Main from './comonents/main/Main';
@@ -13,6 +13,10 @@ export default function App() {
 
     return +balance;
   });
+
+  useEffect(() => {
+    localStorage.setItem('balance', balance);
+  }, [balance]);
 
   return (
     <div className="App">

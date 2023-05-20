@@ -1,10 +1,8 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Panel from '../main_panel/MainPanel';
 import Targets from "../main_targets/Targets";
 
 export default function Main({balance}) {
-  // balance use in Targets for calculating 
-  
   const [targetsList, setTargetsList] = useState(() => {
     // get user targets list and return it
     let list = JSON.parse(localStorage.getItem('targetsList'));
@@ -15,11 +13,14 @@ export default function Main({balance}) {
     return list;
   });
 
+  useEffect(() => {
+    localStorage.setItem('targetsList', JSON.stringify(targetsList));
+  }, [targetsList]);
 
   return (
     <main className='container'>
-      <Panel />      
-      <Targets />
+      <Panel setTargetsList={setTargetsList}/>
+      <Targets balance={balance} targetsList={targetsList} setTargetsList={setTargetsList}/>
     </main>
   );
 }

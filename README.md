@@ -1,9 +1,9 @@
 Tasks
-- Header 
-  - add button
-  - rem button
-- Panel
-  - add new target
-- Target elem
-  - edit button
-  - delete button
+- [x] Header 
+  - [x] add button
+  - [x] rem button
+- [x] Panel
+  - [x] add new target
+- [ ] Target elem
+  - [ ] edit button
+  - [ ] delete button
