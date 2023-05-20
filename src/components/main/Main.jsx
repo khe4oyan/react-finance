@@ -20,8 +20,8 @@ export default function Main({balance}) {
 
   return (
     <main className='main container'>
-      <Panel setTargetsList={setTargetsList}/>
       <Targets balance={balance} targetsList={targetsList} setTargetsList={setTargetsList}/>
+      <Panel setTargetsList={setTargetsList}/>
     </main>
   );
 }

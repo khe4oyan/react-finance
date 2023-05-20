@@ -5,13 +5,14 @@
   display: grid;
   grid-template-columns: 3fr 1fr;
 }
-.target-info{}
-.target-name {}
-.target-price {}
-.target-lacks {color: red;}
-.target-lacks-done{
-  color: green;
+/* .target-info{} */
+/* .target-name {} */
+/* .target-price {} */
+.target-lacks {
+  color: rgba(0, 0, 0, .6);
+  margin-top: 5px;
 }
+
 /* .target-panel {} */
 .target-panel__btn {
   width: 100%;
@@ -19,3 +20,18 @@
 }
 /* .target-panel__btn-edit {} */
 /* .target-panel__btn-delete {} */
+
+.progress-bar {
+  width: 90%;
+  height: 10px;
+  background-color: rgb(206, 206, 206);
+  border-radius: 20px;
+}
+.progress-bar__bar {
+  background-color: green;
+  width: 17%;
+  height: 100%;
+}
+.progress-bar__bar-25{ background-color: red;}
+.progress-bar__bar-90{ background-color: orange;}
+.progress-bar__bar-100{ background-color: green;}

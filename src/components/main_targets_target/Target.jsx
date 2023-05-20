@@ -7,6 +7,8 @@ export default function Target({setTargetsList, ind, balance, data}) {
   const [editPrice, setEditPrice] = useState(data[1]);
   const targetLacks = data[1] - balance < 0 ? 0 : Math.abs(balance - data[1]); 
 
+  const [targetLacksPrcent, barColor] = prcentCalculate(data[1], balance);
+
   function del() {
     setTargetsList(prev => {
       return prev.filter((_, index) => { return index != ind});
@@ -23,9 +25,9 @@ export default function Target({setTargetsList, ind, balance, data}) {
       prev[ind] = [editName, editPrice];
       return [...prev];
     });
-    cancel();
+    setEditMode(false);
   }
-  
+
   return (
     <div className='target'>
       <div className='target-info'>
@@ -37,8 +39,11 @@ export default function Target({setTargetsList, ind, balance, data}) {
           </> :
           <>
             <h2 className='target-name'>{data[0]}</h2>
-            <p className='target-price'>Salary: {data[1]}</p>
-            <p className={`target-lacks ${targetLacks == 0 && 'target-lacks-done'}`}>$({targetLacks})</p>
+            <p className='target-price'>Price: {data[1]}</p>
+            <div className='progress-bar'>
+              <div style={{'width': `${targetLacksPrcent}%`}} className={`progress-bar__bar ${barColor}`}></div>
+            </div>
+            <p className={'target-lacks'}>Done({targetLacksPrcent}%) {targetLacksPrcent < 100 && `You need: ${targetLacks}`}</p>
           </>
         }
       </div>
@@ -57,4 +62,17 @@ export default function Target({setTargetsList, ind, balance, data}) {
       </div>
     </div>
   );
+}
+
+function prcentCalculate(num1, num2) {
+  let res = [Math.floor(( num2 / num1 ) * 100)];
+  if (res[0] > 100) {
+    res[0] = 100;
+  }
+
+  if (res[0] < 26) { res.push('progress-bar__bar-25')} else
+  if (res[0] < 91) { res.push('progress-bar__bar-90')} else
+  if (res[0] < 101) { res.push('progress-bar__bar-100')}
+
+  return res;
 }
