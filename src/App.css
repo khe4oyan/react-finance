@@ -6,6 +6,8 @@
   border-radius: 3px;
 }
 .App {
+  max-width: 700px;
+  margin: auto;
   min-height: 100dvh;
 }
 .center {

@@ -21,7 +21,7 @@ export default function App() {
   return (
     <div className="App">
       <Header balance={balance} setBalance={setBalance}/>
-      <Main balance={balance}/>
+      <Main balance={balance} setBalance={setBalance}/>
     </div>
   );
 }

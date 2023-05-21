@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import './target.css';
 
-export default function Target({setTargetsList, ind, balance, data}) {
+export default function Target({setBalance, setTargetsList, ind, balance, data}) {
   const [editMode, setEditMode] = useState(false);
   const [editName, setEditName] = useState(data[0]);
   const [editPrice, setEditPrice] = useState(data[1]);
@@ -26,6 +26,10 @@ export default function Target({setTargetsList, ind, balance, data}) {
       return [...prev];
     });
     setEditMode(false);
+  }
+  function buy() {
+    del();
+    setBalance(prev => { return prev - data[1]});
   }
 
   return (
@@ -57,6 +61,7 @@ export default function Target({setTargetsList, ind, balance, data}) {
           <>
             <button onClick={edit} className='target-panel__btn target-panel__btn-edit'>edit</button>
             <button onClick={del} className='target-panel__btn target-panel__btn-delete'>delete</button>
+            <button disabled={targetLacksPrcent < 100} onClick={buy} className='target-panel__btn target-panel__btn-buy'>buy</button>
           </>
         }
       </div>

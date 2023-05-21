@@ -18,6 +18,10 @@
   width: 100%;
   margin: 1px;
 }
+.target-panel__btn:disabled {
+  background-color: rgb(179, 179, 179);
+  opacity: .5;
+}
 /* .target-panel__btn-edit {} */
 /* .target-panel__btn-delete {} */
 

@@ -3,7 +3,7 @@ import Panel from '../main_panel/MainPanel';
 import Targets from "../main_targets/Targets";
 import './main.css'
 
-export default function Main({balance}) {
+export default function Main({balance, setBalance}) {
   const [targetsList, setTargetsList] = useState(() => {
     // get user targets list and return it
     let list = JSON.parse(localStorage.getItem('targetsList'));
@@ -20,7 +20,7 @@ export default function Main({balance}) {
 
   return (
     <main className='main container'>
-      <Targets balance={balance} targetsList={targetsList} setTargetsList={setTargetsList}/>
+      <Targets setBalance={setBalance} balance={balance} targetsList={targetsList} setTargetsList={setTargetsList}/>
       <Panel setTargetsList={setTargetsList}/>
     </main>
   );
