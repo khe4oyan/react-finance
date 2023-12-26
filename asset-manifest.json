@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/react-finance/static/css/main.e5da42c2.css",
+    "main.css": "/react-finance/static/css/main.6822c6db.css",
     "main.js": "/react-finance/static/js/main.43806091.js",
     "index.html": "/react-finance/index.html",
-    "main.e5da42c2.css.map": "/react-finance/static/css/main.e5da42c2.css.map",
+    "main.6822c6db.css.map": "/react-finance/static/css/main.6822c6db.css.map",
     "main.43806091.js.map": "/react-finance/static/js/main.43806091.js.map"
   },
   "entrypoints": [
-    "static/css/main.e5da42c2.css",
+    "static/css/main.6822c6db.css",
     "static/js/main.43806091.js"
   ]
 }
