@@ -1,6 +1,6 @@
 .header {
   border-radius: initial;
-  background-color: green;
+  background-color: rgb(37, 37, 37);
   display: grid;
   grid-template-columns: 10fr 1fr;
 }
@@ -9,6 +9,6 @@
   text-align: center;
 }
 .header__button {
-  background-color: darkgreen;
+  background-color: rgb(20, 20, 20);
   color: white;
 }
